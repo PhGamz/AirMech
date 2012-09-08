@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AirMech - Random Loadout Generator</title>
+	<meta name="author" content="Fedcomp">
+
+	<!-- Le styles -->
+	<link href="../public/css/bootstrap.css" rel="stylesheet">
+	<link href="../public/css/airmech-ui/jquery-ui.custom.css" rel="stylesheet">
+	<link href="./public/css/style.css" rel="stylesheet">
+	<link href="../public/css/jquery.jgrowl.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body>
+
+<div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+	<h1>AirMech Random Loadout Generator!</h1>
+	<p></p>
+	<p>Don't know what to use? get crazy advice :)</p>
+</div>
+
+<div class="row">
+	<div class="offset1 span11">
+	<div align="center">
+		<h4>Select the units that you have</h4>
+		<br />
+		<p>
+			<ul id="units_selectable_list" class="selectable">
+				<li class="ui-state-default" style="background-image: url('../public/img/units/repair_guardian.png')">Repair Guardian</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/blaster_guardian.png')">Blaster Guardian</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/radar_guardian.png')">Radar Guardian</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/soldier.png')">Soldier</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/runner.png')">Runner</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/probe.png')">Probe</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/boomer.png')">Boomer</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/sam.png')">Sam</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/fixer.png')">Fixer</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/zipper.png')">Zipper</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/tango.png')">Tango</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/jackal.png')">Jackal</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/longhorn.png')">Longhorn</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/gemini.png')">Gemini</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/armadillo.png')">Armadillo</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/goliath.png')">Goliath</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/patcher.png')">Patcher</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/ratchet.png')">Ratchet</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/seeker.png')">Seeker</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/bucky.png')">Bucky</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/t99.png')">T99</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/ultimate_bucky.png')">Ultimate Bucky</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/grinder.png')">Grinder</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/haat.png')">HAAT</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/arty.png')">Arty</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/archy.png')">Archy</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/bertha.png')">Bertha</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/lunchbox.png')">Lunchbox</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/honeypot.png')">Honeypot</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/moneymaker.png')">MoneyMaker</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/lockbox.png')">Lockbox</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/safebox.png')">Safebox</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/vaultbox.png')">Vaultbox</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/bot_spawner.png')">Bot spawner</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/booster.png')">Booster</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/liberty_booster.png')">Liberty Booster</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/bombs.png')">Bombs</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/liberty_bombs.png')">Liberty Bombs</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/heavy_mine.png')">Heavy mine</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/light_mine.png')">Light mine</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/stasis_mine.png')">Stasis mine</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/bear_trap.png')">Bear Trap</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/units/ff2000.png')">FF2000</li>
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="offset2 span9">
+	<div align="center">
+		<h4>Select the airmech that you have</h4>
+		<p>
+			<ul id="airmechs_selectable_list" class="selectable">
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/striker.png')">Striker</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/blackops_striker.png')">BlackOps Striker</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/alpha_striker.png')">Alpha Striker</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/tomcat_striker.png')">Tomcat Striker</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/chopper.png')">Chopper</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/apache_chopper.png')">Apache chopper</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/shark_chopper.png')">Shark chopper</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/bomber.png')">Bomber</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/blackops_bomber.png')">BlackOps Bomber</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/tomcat_bomber.png')">Phantom Bomber</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/beta_bomber.png')">Beta Bomber</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/neo.png')">Neo</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/shark_neo.png')">Shark Neo</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/star_neo.png')">Star Neo</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/saucer.png')">Saucer</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/chrome_saucer.png')">Chrome Saucer</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/blackops_saucer.png')">BlackOps Saucer</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/alien_saucer.png')">Alien Saucer</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/osprey.png')">Osprey</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/medic_osprey.png')">Medic Osprey</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/nvision_osprey.png')">NVision Osprey</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/warthog.png')">Warthog</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/pirate_warthog.png')">Pirate Warthog</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/easter_osprey.png')">Easter Osprey</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/airmech/green_sea_bomber.png')">GreenSea Bomber</li>
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="offset2 span9">
+	<div align="center">
+		<h4>Select the pilots that you have</h4>
+		<p>
+			<ul id="pilots_selectable_list" class="selectable">
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/no_pilot.png')">No pilot</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/goh.png')">Goh</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/natasha.png')">Natasha</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/hawk.png')">Hawk</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/ashe.png')">Ashe</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/lexi.png')">Lexi</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/erik.png')">Erik</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/mako.png')">Mako</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/petros.png')">Petros</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/raven.png')">Raven</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/beppo.png')">Beppo</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/kira.png')">Kira</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/samson.png')">Samson</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/ultimate_samson.png')">Ultimate Samson</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/gabe.png')">Gabe</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/tycho.png')">Tycho</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/annarchy.png')">Annarchy</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/carl.png')">Carl</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/charles.png')">Charles</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/scout_master.png')">Scout master</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/kara.png')">Kara</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/brenna.png')">Brenna</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/jesus.png')">Jesus</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/lady_gaia.png')">Lady Gaia</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/alien.png')">Alien</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/husky.png')">Husky</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/chimneyswift.png')">ChimneySwift</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/pilots/ken.png')">Ken</li>
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="offset2 span9">
+	<div align="center">
+		<h4>Select the items that you have</h4>
+		<p>
+			<ul id="items_selectable_list" class="selectable">
+				<li class="ui-state-default" style="background-image: url('../public/img/items/no_item.png')">No item</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/clover.png')">Clover</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/atlas.png')">Atlas</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/chocolate_bunny.png')">Chocolate bunny</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/colored_egg.png')">Colored Egg</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/sunflower_seeds.png')">Sunflower Seeds</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/sky_pearl_bracelet.png')">Sky Pearl Bracelet</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/fluorescent_lightbulb.png')">Fluorescent Lightbulb</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/repair_bot.png')">Repair bot</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/waist_pouch.png')">Waist pouch</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/canned_meat_product.png')">Canned meat product</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/red_charm_bracelet.png')">Red charm bracelet</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/uncle_sams_hat.png')">Uncle sams's hat</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/higgs_boson.png')">Higgs boson</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/congee.png')">Congee</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/chimneys_tooth.png')">Chimney's Tooth</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/items/graduation_cap.png')">Graduation hat</li>
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="offset2 span9">
+	<div align="center">
+		<h4>Select the flairs that you have</h4>
+		<p>
+			<ul id="flairs_selectable_list" class="selectable">
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/no_flair.png')">No Flair</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/green_tracers.png')">Green Tracers</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/magenta_tracers.png')">Magenta Tracers</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/cyan_tracers.png')">Cyan Tracers</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/red_tracers.png')">Red Tracers</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/missile_party_streamers.png')">Missile Party Streamers</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/one_ball.png')">One Ball</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/two_ball.png')">Two Ball</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/google_io_2012.png')">Google I/O 2012</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/flaming_torch.png')">Flaming Torch</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/gold_medal.png')">Gold Medal</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/silver_medal.png')">Silver Medal</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/bronze_medal.png')">Bronze Medal</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/merch.png')">Merch</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/bald_eagle.png')">Bald Eagle</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/flairs/trophy.png')">Trophy</li>
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="offset2 span9">
+	<div align="center">
+		<h4>Select the colors that you have</h4>
+		<p>
+			<ul id="colors_selectable_list" class="selectable">
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/blue_1.png')">Blue 1</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/blue_2.png')">Blue 2</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/blue_3.png')">Blue 3</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/blue_4.png')">Blue 4</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/red_1.png')">Red 1</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/red_1.png')">Red 2</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/red_1.png')">Red 3</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/red_1.png')">Red 4</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/green_1.png')">Green 1</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/green_2.png')">Green 2</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/green_3.png')">Green 3</li>
+				<li class="ui-state-default" style="background-image: url('../public/img/colors/green_4.png')">Green 4</li>
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="row">
+	<div class="offset2 span9">
+	<div align="center">
+		<h3>Press the button:</h3>
+		<p><a id="generate_button" class="btn btn-inverse btn-large span3" style="float: none;">Generate!</a></p>
+	</div>
+	</div>
+</div>
+
+<div id="random_row" class="row">
+	<div class="offset4 span6">
+	<div align="center">
+		<h4>Your random loadout!</h4>
+		<br />
+		<p>
+			<ul id="units_loadout" class="not-selectable">
+			</ul>
+		</p>
+	</div>
+	</div>
+</div>
+
+<hr>
+
+<footer>
+	<p>&copy; Fedcomp 2012. <span>Have fun with only heal units loadout</span></p>
+</footer>
+
+</div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+	<script src="../public/js/jquery.jgrowl.js"></script>
+	<script src="../public/js/jquery.cookie.js"></script>
+	<script src="../public/js/jquery.scrollto.js"></script>
+	<script src="./public/js/code.js"></script>
+  </body>
+</html>
